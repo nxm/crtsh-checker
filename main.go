@@ -6,8 +6,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/famasoon/crtsh/crtlog"
-	"github.com/famasoon/crtsh/parser"
+	"github.com/nxm/crtsh-checker/crtlog"
+	"github.com/nxm/crtsh-checker/parser"
 )
 
 func showUsage() {

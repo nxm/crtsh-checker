@@ -5,7 +5,7 @@ import (
 	"encoding/pem"
 	"fmt"
 
-	"github.com/famasoon/crtsh/crtlog"
+	"github.com/nxm/crtsh-checker/crtlog"
 )
 
 func ParseCTLog(certID int) error {

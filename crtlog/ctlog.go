@@ -3,7 +3,7 @@ package crtlog
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/famasoon/crtsh/misc"
+	"github.com/nxm/crtsh-checker/misc"
 	"io/ioutil"
 	"net/http"
 	"strconv"

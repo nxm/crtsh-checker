@@ -6,7 +6,7 @@ crtsh
 ## Installation
 
 ```sh
-go get github.com/famasoon/crtsh
+go get github.com/nxm/crtsh-checker
 ```
 
 ## Usage
@@ -274,8 +274,8 @@ www.example.net
 ## Importing
 ```go
 import (
-    "github.com/famasoon/crtsh/ctlog"
-    "github.com/famasoon/crtsh/parser"
+    "github.com/nxm/crtsh-checker/ctlog"
+    "github.com/nxm/crtsh-checker/parser"
 )
 ```
 ## Credit
