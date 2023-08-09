@@ -3,6 +3,7 @@ package crtlog
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/famasoon/crtsh/misc"
 	"io/ioutil"
 	"net/http"
 	"strconv"
@@ -89,7 +90,7 @@ func SearchCommon(query string, onlyDomainFlag bool) error {
 }
 
 // QueryCrt query in crt.sh and print result that
-func QueryCrt(query string, onlyDomainFlag bool) error {
+func QueryCrt(query string, onlyDomainFlag bool, aliveDomainFlag bool) error {
 	var ctlogs CTLogs
 
 	res, err := queryCrtsh(CRTSHURL + "?output=json&q=" + query)
@@ -102,7 +103,14 @@ func QueryCrt(query string, onlyDomainFlag bool) error {
 
 	if onlyDomainFlag {
 		for _, ctlog := range ctlogs {
-			fmt.Printf("%s\n", ctlog.NameValue)
+
+			if aliveDomainFlag {
+				if misc.CheckDomainAlive(ctlog.NameValue) {
+					fmt.Printf("%s\n", ctlog.NameValue)
+				}
+			} else {
+				fmt.Printf("%s\n", ctlog.NameValue)
+			}
 		}
 	} else {
 		for _, ctlog := range ctlogs {

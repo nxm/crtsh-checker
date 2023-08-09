@@ -114,6 +114,8 @@ And `-q` option can use `-o` option.
 
 The `-o` option only enumerates domains.
 
+The `-a` option checks if the domain is alive.
+
 ```sh
 $ crtsh -q example.com -o
 example.com
