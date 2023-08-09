@@ -6,7 +6,7 @@ crtsh
 ## Installation
 
 ```sh
-go get github.com/nxm/crtsh-checker
+go install github.com/nxm/crtsh-checker@latest
 ```
 
 ## Usage
